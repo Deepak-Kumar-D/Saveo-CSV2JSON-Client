@@ -1,0 +1,65 @@
+.upload {
+  display: grid;
+  place-content: center;
+  min-height: 80vh;
+  animation: fadeIn 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.upload > form {
+  background-color: #fff;
+  width: 500px;
+  height: 200px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 3px 20px 1px #2424245e;
+  position: relative;
+}
+
+.upload > form > input[type="file"]::-webkit-file-upload-button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid #48d1cc;
+  color: #49447c;
+  font-size: large;
+  background: none;
+  transition: 0.25s ease;
+}
+
+.upload > form > input[type="file"]::-webkit-file-upload-button:hover {
+  border: 1px solid #48d1cc;
+  color: #fff;
+  background: #49447c;
+}
+
+.upload > form > input[type="submit"] {
+  position: absolute;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 200px;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #49447c;
+  border: 2px solid transparent;
+  color: #fff;
+  font-size: large;
+  letter-spacing: 1px;
+}
+
+.upload > form > input[type="submit"]:hover {
+  background-color: #fff;
+  border: 2px solid #48d1cc;
+  color: #49447c;
+}

@@ -1,0 +1,73 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+  animation: LoadIn 0.8s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes LoadIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main {
+  min-height: 90vh;
+  padding: 1rem;
+  position: relative;
+}
+
+.circle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  z-index: -1;
+}
+
+.circle-1 {
+  position: relative;
+  width: 56vw;
+  height: 56vw;
+  border: 1px dashed #d3d2d2;
+  border-radius: 50%;
+  animation: circleIn 1.3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.circle-2 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 45vw;
+  height: 45vw;
+  border: 1px dashed #d3d2d2;
+  border-radius: 50%;
+  animation: circleIn 1.2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.circle-3 {
+  position: absolute;
+  top: 12%;
+  left: 12%;
+  width: 35vw;
+  height: 35vw;
+  border: 1px dashed #d3d2d2;
+  border-radius: 50%;
+  animation: circleIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes circleIn {
+  0% {
+    transform: scale(0%);
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}

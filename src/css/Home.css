@@ -1,0 +1,143 @@
+.home {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  animation: fadeInSearch 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInSearch {
+  0% {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.home > .searchbar {
+  background-color: #fff;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  box-shadow: 1px 3px 10px 1px #2424245e;
+}
+
+.home > .searchbar > input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: large;
+}
+
+.home > .searchbar > span {
+  cursor: pointer;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  background-color: #49447c;
+  display: flex;
+  justify-content: center;
+  padding: 8px 1.2rem;
+  border-radius: 20px;
+}
+
+.home > .searchbar > span > svg {
+  font-size: 1.5rem;
+  color: #ffff;
+}
+
+.home > .searchbar > span:hover svg {
+  color: #48d1cc;
+}
+
+.home > .meds-list {
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.home > .meds-list::-webkit-scrollbar {
+  cursor: pointer;
+  width: 5px;
+}
+
+.home > .meds-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+}
+
+.home > .meds-list::-webkit-scrollbar-thumb {
+  background-color: #49447c;
+}
+
+.home > .meds-list:hover {
+  overflow-y: auto;
+}
+
+.home > .meds-list > table {
+  border-spacing: 5px;
+  width: 100%;
+}
+
+.home > .meds-list > table > thead {
+  background-color: #48d1cc;
+}
+
+.home > .meds-list > table > thead > tr > th {
+  color: #49447c;
+  padding: 1rem;
+  font-size: large;
+  letter-spacing: 1px;
+}
+
+.home > .meds-list > table > tbody > tr > td {
+  padding: 1rem;
+  color: #49447c;
+  font-weight: 700;
+  border: 2px solid #c9c9c9;
+}
+
+@media screen and (max-width: 768px) {
+  .home > .searchbar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home > .searchbar {
+    width: 300px;
+  }
+
+  .home > .searchbar > input {
+    padding: 0;
+    font-size: small;
+  }
+
+  .home > .searchbar > span {
+    margin-left: 0;
+    padding: 8px 1rem;
+  }
+
+  .home > .meds-list {
+    max-width: 300px;
+  }
+
+  .home > .meds-list > table > tbody > tr > tr > th {
+    font-size: medium;
+    padding: 1rem 0.5rem;
+  }
+
+  .home > .meds-list > table > tbody > tr > tr > td {
+    font-size: medium;
+    padding: 1rem 0.3rem;
+  }
+}

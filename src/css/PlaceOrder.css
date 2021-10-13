@@ -1,0 +1,71 @@
+.place-order {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.place-order > h3 {
+  color: #49447c;
+  margin: 1rem;
+}
+
+.place-order > table {
+  border-spacing: 1px;
+  width: 500px;
+}
+
+.place-order > table > thead > tr > th {
+  background-color: #49447c;
+  color: #ffff;
+  padding: 1rem;
+}
+
+.place-order > table > tbody > tr > td {
+  color: #49447c;
+  padding: 1rem 0.5rem;
+  border: 1px solid #c9c9c9;
+  text-align: center;
+}
+
+.place-order > .order-btn {
+  margin-top: 1rem;
+  width: 500px;
+}
+
+.place-order > .order-btn > button {
+  padding: 1rem;
+  width: 150px;
+  cursor: pointer;
+  background-color: #48d1cc;
+  color: #49447c;
+  font-size: medium;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.place-order > .order-btn > button:hover {
+  border-color: #48d1cc;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  .place-order > table {
+    width: 200px;
+  }
+
+  .place-order > .order-btn {
+    width: fit-content;
+  }
+
+  .place-order > table > thead > tr > th {
+    font-size: small;
+  }
+
+  .place-order > table > tbody > tr > td {
+    font-size: small;
+  }
+}

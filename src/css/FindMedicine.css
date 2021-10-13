@@ -1,0 +1,153 @@
+.findMedicine {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  animation: fadeInSearch 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInSearch {
+  0% {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.findMedicine > .searchbar {
+  background-color: #fff;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  box-shadow: 1px 3px 10px 1px #2424245e;
+}
+
+.findMedicine > .searchbar > input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: large;
+}
+
+.findMedicine > .searchbar > span {
+  cursor: pointer;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  background-color: #49447c;
+  display: flex;
+  justify-content: center;
+  padding: 8px 1.2rem;
+  border-radius: 20px;
+}
+
+.findMedicine > .searchbar > span > svg {
+  font-size: 1.5rem;
+  color: #ffff;
+}
+
+.findMedicine > .searchbar > span:hover svg {
+  color: #48d1cc;
+}
+
+.findMedicine > .meds-list {
+  margin-top: 2rem;
+  width: 600px;
+}
+
+.findMedicine > .meds-list > table {
+  border-spacing: 5px;
+  width: 100%;
+}
+
+.findMedicine > .meds-list > table > tbody > tr > th {
+  background-color: #49447c;
+  color: #ffff;
+  padding: 1rem;
+  font-weight: 300;
+  font-size: large;
+  letter-spacing: 1px;
+}
+
+.findMedicine > .meds-list > table > tbody > tr > tr > th {
+  background-color: #48d1cc;
+  text-align: left;
+  color: #49447c;
+  padding: 1rem;
+  font-size: large;
+  letter-spacing: 1px;
+}
+
+.findMedicine > .meds-list > table > tbody > tr > tr > td {
+  width: 100%;
+  padding: 1rem;
+  color: #49447c;
+  font-weight: 700;
+  border: 2px solid #c9c9c9;
+}
+
+.findMedicine > .meds-list > table > tbody > tr > th > input {
+  width: 50%;
+  padding: 1rem;
+  font-size: medium;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.findMedicine > .meds-list > table > tbody > tr > th > input[type="submit"] {
+  cursor: pointer;
+  background-color: #48d1cc;
+  color: #49447c;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.findMedicine
+  > .meds-list
+  > table
+  > tbody
+  > tr
+  > th
+  > input[type="submit"]:hover {
+  border-color: #fff;
+  background-color: #49447c;
+  color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  .findMedicine > .searchbar {
+    width: 300px;
+  }
+
+  .findMedicine > .searchbar > input {
+    padding: 0;
+    font-size: small;
+  }
+
+  .findMedicine > .searchbar > span {
+    margin-left: 0;
+    padding: 8px 1rem;
+  }
+
+  .findMedicine > .meds-list {
+    max-width: 300px;
+  }
+
+  .findMedicine > .meds-list > table > tbody > tr > tr > th {
+    font-size: medium;
+    padding: 1rem 0.5rem;
+  }
+
+  .findMedicine > .meds-list > table > tbody > tr > tr > td {
+    font-size: medium;
+    padding: 1rem 0.3rem;
+  }
+}
