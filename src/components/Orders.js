@@ -7,7 +7,9 @@ const Orders = () => {
 
   useEffect(() => {
     const orderList = async () => {
-      const obj = await axios.get("http://localhost:5000/orders");
+      const obj = await axios.get(
+        "https://saveo-csvjson-db.herokuapp.com/orders"
+      );
       console.log(obj.data);
 
       setList(obj.data);

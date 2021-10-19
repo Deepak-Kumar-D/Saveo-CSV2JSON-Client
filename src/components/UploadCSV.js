@@ -11,7 +11,10 @@ const UploadCSV = () => {
     const uploadFile = new FormData();
     uploadFile.append("fileName", file);
 
-    const obj = await axios.post("http://localhost:5000/uploadCSV", uploadFile);
+    const obj = await axios.post(
+      "https://saveo-csvjson-db.herokuapp.com/uploadCSV",
+      uploadFile
+    );
 
     if (obj.status === 200) {
       alert(obj.data.message);

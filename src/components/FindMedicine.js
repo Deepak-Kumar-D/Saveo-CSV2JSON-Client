@@ -14,7 +14,7 @@ const FindMedicine = () => {
 
   const List = async () => {
     const obj = await axios.get(
-      `http://localhost:5000/getMedicineDetails/${search}`
+      `https://saveo-csvjson-db.herokuapp.com/getMedicineDetails/${search}`
     );
 
     setResult(obj.data);

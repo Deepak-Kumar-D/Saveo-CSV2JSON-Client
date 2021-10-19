@@ -9,7 +9,7 @@ const Home = () => {
 
   const List = async () => {
     const obj = await axios.get(
-      `http://localhost:5000/searchMedicine/${search}`
+      `https://saveo-csvjson-db.herokuapp.com/searchMedicine/${search}`
     );
 
     setResult(obj.data);

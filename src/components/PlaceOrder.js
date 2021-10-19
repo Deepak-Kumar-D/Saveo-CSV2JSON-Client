@@ -10,7 +10,10 @@ const PlaceOrder = () => {
   const cart = { order: list };
 
   const orderMeds = async () => {
-    const obj = await axios.post("http://localhost:5000/placeorder", cart);
+    const obj = await axios.post(
+      "https://saveo-csvjson-db.herokuapp.com/placeorder",
+      cart
+    );
 
     if (obj.status === 200) {
       alert(obj.data.message);
